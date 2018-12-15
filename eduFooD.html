@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Edu_FooD</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--icon-->
+    <link rel="icon" href="img/logo-icon.png">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilizacao.css">
+
+    <!--js-->
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/boliviaFOOD.js"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+        body{
+            font-family: 'Roboto Condensed', sans-serif;
+            padding: 20px;
+            background: url(img/background2.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            padding-top: 3px;
+        }
+    </style>
+</head>
+<body onload="ocultarDados('majau'), ocultarDados('saltenhas')">
+    <div class="container">
+        <div class="jumbotron">
+            <center>
+                <img src="img/logo-icon.png" alt="logo-icon" class="image-responsive" width="280">
+                <h1>BoliviaFooD</h1>
+            </center>
+        </div>
+       
+        <div class="container-Fomatado">
+            <fieldset>
+            <legend class="">Dados Pessoais:</legend>
+            <div class="row">
+                <form class="col-sm-6 col-md-6 form-group">
+                    <input type="text" id="nomeCliente" class="form-control" placeholder="Insira seu Nome Completo" maxlength="20">
+                </form>
+                <form class="col-sm-6 col-md-6 form-group">
+                    <input type="text" id="telfCliente" class="form-control" placeholder="Insira seu número de contato" maxlength="20">
+                </form>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Endereço: </legend>
+            <div class="row">
+                <form class="col-sm-6 col-md-6 form-group">
+                    <input type="text" id="ruaCliente" class="form-control" placeholder="Insira seu Endereço de entrega" maxlength="20">
+                </form>
+                <form class="col-sm-6 col-md-6 form-group">
+                    <input type="text" id="cepCliente" class="form-control" placeholder="Infome seu CEP" maxlength="20">
+                </form>
+                <form class="col-sm-12 col-md-12 form-group">
+                    <select name="bairroCliente" id="bairroCliente" class="form-control">
+                        <option value="0">Selecione o Bairro</option>
+                        <option value="APARECIDA">APARECIDA</option>
+                        <option value="BOM JESUS">BOM JESUS</option>
+                        <option value="CUSTODIO">CUSTODIO</option>
+                        <option value="DANIEL FONSECA">DANIEL FONSECA</option>
+                        <option value="PACAEMBÚ">PACAEMBÚ</option>
+                        <option value="ALTO UMUARAMA">ALTO UMUARAMA</option>
+                        <option value="ROOSEVELT">ROOSEVELT</option>
+                        <option value="MARTINS">MARTINS</option>
+                        <option value="CENTRO">CENTRO</option>
+                        <option value="TABAJARAS">TABAJARAS</option>
+                        <option value="MORUMBÍ">MORUMBÍ</option>
+                    </select>
+                </form>
+                <form class="col-sm-12 col-md-12 form-group">
+                        <select name="cidadeCliente" id="cidadeCliente" class="form-control">
+                        <option value="0">Selecione a Cidade</option>
+                        <option value="Uberlândia">Uberlândia</option>
+                        <option value="Uberaba">Uberaba</option>
+                        <option value="Araguarí">Araguarí</option>
+                        <option value="Nova Ponte">Nova Ponte</option>
+                        <option value="Belo Horizonte">Belo Horizonte</option>
+                    </select>
+                </form>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Combos:</legend>
+            <div class="row">
+                <form class="col-sm-12 col-md-12 form-group">
+                        <select name="combosCliente" id="pratoEscolhido" class="form-control" onfocus="pratoEscolhido()">
+                        <option value="0">Selecione Sua Comida</option>
+                        <option value="MAJAU">Majau com Platano</option>
+                        <option value="SALTENHAS">Saltenhas</option>
+                    </select>
+                </form>
+            </div>
+        </fieldset>
+
+        <!-- Opções de Comida...-->
+        <hr>
+        <div class="row" id="majau">
+            <div class="col-sm-12 col-md-12 col-xs-12">
+                <table class="table table-bordered table-responsive">
+                <thead>
+                    <td align="center">
+                        <h2>Majau</h2>
+                    </td>
+                    <td align="center">
+                        <h2>Descrição</h2>
+                    </td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="center">
+                            <img src="img/prato-de-comida-caseira.png" alt="pf" width="300" style="padding-top: 10px; border-radius: 30px">
+                        </td>
+                        <td align="center">
+                            <p class="marginP">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
+                                Duis tincidunt eleifend elit, eget condimentum eros feugiat vitae. <br>
+                                Duis finibus tortor nisl, eu vehicula tortor ornare quis.
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+        <!-- Opções de Comida...-->
+        <hr>
+        <div class="row" id="saltenhas">
+            <div class="col-sm-12 col-md-12 col-xs-12">
+                <table class="table table-bordered table-responsive">
+                <thead>
+                    <td align="center">
+                        <h2>Salteñas</h2>
+                    </td>
+                    <td align="center">
+                        <h2>Descrição</h2>
+                    </td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="center">
+                            <img src="img/saltenhas-potosinas.png" alt="pfr" width="300" style="padding-top: 10px; border-radius: 30px">
+                        </td>
+                        <td align="center">
+                            <p class="marginP">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
+                                Duis tincidunt eleifend elit, eget condimentum eros feugiat vitae. <br>
+                                Duis finibus tortor nisl, eu vehicula tortor ornare quis.
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            <hr>
+        </div>
+        <!--Botoes-->
+        <div class="row">
+                <div class="col-sm-6 col-xs-6">
+                    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#pedidoConfirmado">CONFIRMAR PEDIDO</button>
+                </div>
+                <div class="col-sm-6 col-xs-6">
+                    <button type="button" class="btn btn-danger btn-lg btn-block">CANCELAR PEDIDO</button>
+                </div>
+            </div>
+    </div>
+
+    <!--Modal da Informação do Pedido -->
+    <div class="modal fade" id="pedidoConfirmado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+
+    <!-- Configuração para rodar os processos do Bootstrap juntamente com JS -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
